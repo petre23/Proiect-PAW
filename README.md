@@ -1,2 +1,0 @@
-# Proiect-PAW
-Proiect PAW
