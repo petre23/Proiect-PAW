@@ -1,12 +1,11 @@
-﻿@model GamingSite.Models.Game
+﻿@model List<GamingSite.Models.ModelBO.Game>
 
 @{
     ViewBag.Title = "About";
 }
 
-<img src=@Model.ImageUrl>
-<h3>Name:@Model.Name</h3>
-<h3>Genre:@Model.Genre</h3>
-<h2>Rating : <b>@Model.Rating</b></h2>
-<h3>Release Year :@Model.ReleaseYear</h3>
+@foreach (var game in Model)
+{
+    <h3>Name : @game.Name</h3>
+}
 

@@ -1,4 +1,6 @@
 ﻿using GamingSite.Models;
+using GamingSite.Models.ModelBL;
+using GamingSite.Models.ModelBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +19,11 @@ namespace GamingSite.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Game";
-            Game gameInfo = new Game();
-            gameInfo.Name = "Call Of Duty Black Ops 3";
-            gameInfo.Genre = "FPS";
-            gameInfo.Rating = (float)8.9;
-            gameInfo.ReleaseYear = 2015;
-            gameInfo.ImageUrl = "http://blogs-images.forbes.com/insertcoin/files/2015/08/black-ops-3-beta1.jpg";
+            List<Game> gameList = new List<Game>();
+            GameBL gameLogic = new GameBL();
+            gameList = gameLogic.GetAllGames();
 
-            return View(gameInfo);
+            return View(gameList);
         }
 
         public ActionResult Contact()
