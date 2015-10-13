@@ -12,22 +12,30 @@ namespace GamingSite.Models.ModelBL
     {
         public UserBL() : base() { }
 
-        public void InsertUser(User usr)
+        public bool InsertUser(User usr)
         {
-            using (_connection) 
+            try
             {
-                _connection.Open();
-                string insertString = "INSERT INTO USER(Username,Password) VALUES(@Username,@Password)";
-                command.CommandText = insertString;
+                using (_connection)
+                {
+                    _connection.Open();
+                    string insertString = "INSERT INTO SYS_USER(Username,Password) VALUES(@Username,@Password)";
+                    command.CommandText = insertString;
 
-                usr.Password = Sha256Encrypt(usr.Password);
+                    usr.Password = Sha256Encrypt(usr.Password);
 
-                command.Parameters.Add("@Username",usr.Username);
-                command.Parameters.Add("@Password",usr.Password);
+                    command.Parameters.Add("@Username", usr.Username);
+                    command.Parameters.Add("@Password", usr.Password);
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
 
-                _connection.Close();
+                    _connection.Close();
+                }
+                return true;
+            }
+            catch 
+            {
+                return false;
             }
         }
 
@@ -36,7 +44,7 @@ namespace GamingSite.Models.ModelBL
             using (_connection) 
             {
                 _connection.Open();
-                string updateString = "UPDATE USER SET UserNmae = @Username,Password = @Password";
+                string updateString = "UPDATE SYS_USER SET UserNmae = @Username,Password = @Password";
                 command.CommandText = updateString;
 
                 usr.Password = Sha256Encrypt(usr.Password);
@@ -67,7 +75,7 @@ namespace GamingSite.Models.ModelBL
             using (_connection)
             {
                 _connection.Open();
-                string deleteString = "DELETE FROM USER WHERE UserNmae = @Username";
+                string deleteString = "DELETE FROM SYS_USER WHERE UserNmae = @Username";
                 command.CommandText = deleteString;
 
                 command.Parameters.Add("@Username", usr.Username);
@@ -84,7 +92,7 @@ namespace GamingSite.Models.ModelBL
             using (_connection)
             {
                 _connection.Open();
-                string selectString = "SELECT * FROM USER WHERE Username = @Username AND Password = @Password";
+                string selectString = "SELECT * FROM SYS_USER WHERE Username = @Username AND Password = @Password";
                 command.CommandText = selectString;
 
                 usr.Password = Sha256Encrypt(usr.Password);
@@ -112,7 +120,7 @@ namespace GamingSite.Models.ModelBL
             {
                 _connection.Open();
 
-                string selectString = "SELECT Admin FROM USER WHERE Username = @Username";
+                string selectString = "SELECT Admin FROM SYS_USER WHERE Username = @Username";
                 command.CommandText = selectString;
 
                 var reader = command.ExecuteReader();
@@ -134,7 +142,7 @@ namespace GamingSite.Models.ModelBL
             using (_connection)
             {
                 _connection.Open();
-                string selectString = "SELECT * FROM User";
+                string selectString = "SELECT * FROM SYS_USER";
                 command.CommandText = selectString;
                 var reader = command.ExecuteReader();
 
