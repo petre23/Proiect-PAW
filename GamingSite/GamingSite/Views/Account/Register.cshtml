@@ -1,41 +1,92 @@
-﻿@model GamingSite.Models.RegisterViewModel
-@{
-    ViewBag.Title = "Register";
-}
+﻿@using GamingSite.Models
+@model RegisterViewModel
 
-<h2>@ViewBag.Title.</h2>
+<div class="container">
+    <img class="img-responsive" id="logo" src="~/Content/bionic1.png">
+    <div class="row">
+        <div class="col-sm-8">
+        </div>
+        <div class="col-sm-4">
+            <div id="conect">
+                <a href="~/Account/Login"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-user"></span> Login</button></a>
+                <a href="~/Account/Register"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-log-in"></span> Register</button></a>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="~/Content/facebook.png" width="60" height="60">
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="~/Content/tweet.png" width="60" height="60">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="~/Content/youtube.png" width="60" height="60">
+                </a>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+    <nav class="navbar navbar-inverse" id="navbar1">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="~/Home/Index">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 4</a></li>
+                    <li><a href="#">Page 5</a></li>
+                    <li><a href="#">Page 6</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-sm-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <legend id="l1">Create a new account</legend>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label", id = "l1" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", id = "l1" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label",id = "l1" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-default" value="Register" />
+                    </div>
+                </div>
+            }
+        </section>
+
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/PageDesigner.css")
+    @Styles.Render("~/Content/bootstrap.css")
 }

@@ -1,30 +1,76 @@
 ﻿@using GamingSite.Models
 @model LoginViewModel
-@{
-    ViewBag.Title = "Log in";
-}
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" temp_href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js" temp_src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" temp_src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#txtname").tooltip({ track: true });
+        $("#passname").tooltip({ track: true });
+    });
+</script>
+
+<div class="container">
+    <img class="img-responsive" id="logo" src="~/Content/bionic1.png">
+    <div class="row">
+        <div class="col-sm-8">
+        </div>
+        <div class="col-sm-4">
+            <div id="conect">
+                <a href="~/Account/Login"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-user"></span> Login</button></a>
+                <a href="~/Account/Register"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-log-in"></span> Register</button></a>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="~/Content/facebook.png" width="60" height="60">
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="~/Content/tweet.png" width="60" height="60">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="~/Content/youtube.png" width="60" height="60">
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse" id="navbar1">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="~/Home/Index">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 4</a></li>
+                    <li><a href="#">Page 5</a></li>
+                    <li><a href="#">Page 6</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-sm-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
+                  <legend id="l1">Personal Information</legend>
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" ,id = "l1" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "txtname", placeholder = "Enter email", data_toggle = "tooltip", data_placement = "right", title = "Use an active email or you will not be able to  proceed!"})
                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", id = "l1" })
                     <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "passname", placeholder = "Enter Password", data_toggle = "tooltip", data_placement = "right", title = "Please enter your password" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -32,7 +78,7 @@
                     <div class="col-md-offset-2 col-md-10">
                         <div class="checkbox">
                             @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe, new  { id = "l1"})
                         </div>
                     </div>
                 </div>
@@ -50,14 +96,19 @@
                     </p>*@
             }
         </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        @Styles.Render("~/Content/PageDesigner.css")
+        @Styles.Render("~/Content/bootstrap.css")
+        @Styles.Render("~/Scripts/CustomJS.js")        
+    }
