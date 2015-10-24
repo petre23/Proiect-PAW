@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BionicGames.View", "BionicGames\BionicGames.View.csproj", "{2F0B711A-8F8E-46C2-81BD-B51782D6EB6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BionicGames.Model", "Model\BionicGames.Model.csproj", "{ADC3F651-B095-49A1-A7EE-9BC52FACD47E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BionicGames.Controller", "Controller\BionicGames.Controller.csproj", "{94E14C48-7920-4348-AE3D-AD89AECE20FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F0B711A-8F8E-46C2-81BD-B51782D6EB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0B711A-8F8E-46C2-81BD-B51782D6EB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0B711A-8F8E-46C2-81BD-B51782D6EB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0B711A-8F8E-46C2-81BD-B51782D6EB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC3F651-B095-49A1-A7EE-9BC52FACD47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC3F651-B095-49A1-A7EE-9BC52FACD47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC3F651-B095-49A1-A7EE-9BC52FACD47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC3F651-B095-49A1-A7EE-9BC52FACD47E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E14C48-7920-4348-AE3D-AD89AECE20FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E14C48-7920-4348-AE3D-AD89AECE20FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E14C48-7920-4348-AE3D-AD89AECE20FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E14C48-7920-4348-AE3D-AD89AECE20FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

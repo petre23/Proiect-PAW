@@ -1,0 +1,6 @@
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\obj\Debug\BionicGames.Model.csprojResolveAssemblyReference.cache
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\bin\Debug\Model.dll.config
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\bin\Debug\Model.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\bin\Debug\Model.pdb
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\obj\Debug\Model.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\Model\obj\Debug\Model.pdb

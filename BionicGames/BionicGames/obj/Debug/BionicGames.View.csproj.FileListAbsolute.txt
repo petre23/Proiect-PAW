@@ -1,0 +1,20 @@
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\bin\BionicGames.dll.config
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\bin\BionicGames.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\bin\BionicGames.pdb
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\obj\Debug\BionicGames.View.csprojResolveAssemblyReference.cache
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\obj\Debug\BionicGames.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\BionicGames\BionicGames\obj\Debug\BionicGames.pdb
+C:\Users\Mazilu\Documents\Visual Studio 2013\Projects\BionicGames\BionicGames\bin\Controller.dll
+C:\Users\Mazilu\Documents\Visual Studio 2013\Projects\BionicGames\BionicGames\bin\Model.dll
+C:\Users\Mazilu\Documents\Visual Studio 2013\Projects\BionicGames\BionicGames\bin\Controller.pdb
+C:\Users\Mazilu\Documents\Visual Studio 2013\Projects\BionicGames\BionicGames\bin\Model.pdb
+E:\Proiect-PAW\BionicGames\BionicGames\bin\BionicGames.dll.config
+E:\Proiect-PAW\BionicGames\BionicGames\bin\BionicGames.dll
+E:\Proiect-PAW\BionicGames\BionicGames\bin\BionicGames.pdb
+E:\Proiect-PAW\BionicGames\BionicGames\bin\Controller.dll
+E:\Proiect-PAW\BionicGames\BionicGames\bin\Model.dll
+E:\Proiect-PAW\BionicGames\BionicGames\bin\Controller.pdb
+E:\Proiect-PAW\BionicGames\BionicGames\bin\Model.pdb
+E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.View.csprojResolveAssemblyReference.cache
+E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.dll
+E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.pdb
