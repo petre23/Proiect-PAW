@@ -39,13 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelBO\Comment.cs" />
     <Compile Include="ModelBO\Game.cs" />
     <Compile Include="ModelBO\Genre.cs" />
+    <Compile Include="ModelBO\Rating.cs" />
     <Compile Include="ModelBO\SystemRequirements.cs" />
     <Compile Include="ModelBO\User.cs" />
     <Compile Include="ModelDAO\BaseDAO.cs" />
+    <Compile Include="ModelDAO\CommentDAO.cs" />
     <Compile Include="ModelDAO\GameDAO.cs" />
-    <Compile Include="ModelDAO\Genre.cs" />
+    <Compile Include="ModelDAO\GenreDAO.cs" />
+    <Compile Include="ModelDAO\RatingDAO.cs" />
     <Compile Include="ModelDAO\SystemRequirementsDAO.cs" />
     <Compile Include="ModelDAO\UserDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

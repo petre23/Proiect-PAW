@@ -41,7 +41,7 @@ namespace Model.ModelDAO
             return genre;
         }
 
-        public List<Genre> GetAllGenres(int id)
+        public List<Genre> GetAllGenres()
         {
             List<Genre> ganreList = new List<Genre>();
             using (_connection)
