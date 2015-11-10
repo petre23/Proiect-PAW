@@ -13,7 +13,6 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href="../../Content/Designer.css" rel="stylesheet" />
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -60,14 +59,57 @@
 </nav>
         <script id="cid0020000108000263981" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"gamingsite","arch":"js","styles":{"a":"5cb85c","b":100,"c":"000000","d":"000000","k":"5cb85c","l":"5cb85c","m":"5cb85c","p":"10","q":"5cb85c","r":100,"cv":1,"cvbg":"5cb85c","cvfg":"000000","cvw":75,"cvh":30}}</script>
 <asp:ContentPlaceHolder ID="MainPagePlaceHolder" runat="server">
+    
+</asp:ContentPlaceHolder>
     <div class="col-sm-12">
             <div class="jumbotron">
-                <h1>Footer in Construction!!!</h1>
+                <div class="row">
+            <div class="col-sm-2">
+                <div class="wcont">
+                    <h3 class="title">BionicGames</h3>
+                    <ul>
+                        <li><a href="#" title="link 1">About us</a></li>
+                        <li><a href="#" title="link 1">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="col-sm-2">
+                <div class="wcont">
+                    <h3 class="title">Resources</h3>
+                    <ul>
+                        <li><a href="#" title="link 1">Articles</a></li>
+                        <li><a href="#" title="link 1">Links</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="col-sm-2">
+                <div class="wcont">
+                    <h3 class="title">Contact us</h3>
+                    <ul>
+                        <li><a href="#" title="link 1">Editorial Staff</a></li>
+                        <li><a href="#" title="link 1">Contact us</a></li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="col-sm-2">
+                <div class="wcont">
+                    <h3 class="title">Social Media</h3>
+                    <ul>
+                        <li><a href="#" title="link 1">Facebook</a></li>
+                        <li><a href="#" title="link 1">Twitter</a></li>
+                        <li><a href="#" title="link 1">Youtube</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                     <div class="col-sm-2">
+                         <div class="copy">
+                             <p align="center">Powered by BionicGames</p>
+                         </div>
+                    </div>
+                    </div>
             </div>
             </div>
-</asp:ContentPlaceHolder>
-
-    </div>
+        </div>
     </form>
 </body>
 </html>

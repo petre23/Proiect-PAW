@@ -78,9 +78,12 @@
     <Content Include="Resources\05.jpg" />
     <Content Include="Resources\09.jpg" />
     <Content Include="Resources\a12.png" />
+    <Content Include="Resources\arrow1.png" />
     <Content Include="Resources\b05.png" />
     <Content Include="Resources\bionic1.png" />
+    <Content Include="Resources\bionic2.png" />
     <Content Include="Resources\facebook.png" />
+    <Content Include="Resources\footer1.jpg" />
     <Content Include="Resources\future.png" />
     <Content Include="Resources\goblin.jpg" />
     <Content Include="Resources\heroes.jpg" />

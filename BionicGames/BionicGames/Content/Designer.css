@@ -53,7 +53,7 @@ background-color:#222222;
     border: none;
     padding: 10px 20px 10px 20px;
     border-bottom: 4px solid #70d694;
-    border-radius: 3px;
+    border-radius: 10px;
     color:#000;
     font-weight:bold;
     width:100px;
@@ -65,14 +65,13 @@ background-color:#222222;
     border-bottom:4px solid #70d694;
 }
 
-
 #btnRegister{
     margin-left:0px;
     background: #5cb85c;
     border: none;
     padding: 10px 20px 10px 20px;
     border-bottom: 4px solid #70d694;
-    border-radius: 3px;
+    border-radius: 10px;
     color:#000;
     font-weight:bold;
     width:100px;
@@ -88,32 +87,73 @@ background-color:#222222;
     float:right;
     margin-bottom:30px;
     margin-right:40px;
-    width:220px;
-    border-radius:5px;
+    height:30px;
+    width:250px;
+    border-radius:10px;
 }
 
 .jumbotron{
-    margin-left:-30px;
-    margin-right:-30px;
-    margin-bottom:10px;
-    height:200px;
-    background-color:black;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    height:100%;
+    width:155%;
+    background-image:url("../../Resources/footer1.jpg");
 }
 
-.form{
-    color:white;
+.jumbotron .wcont
+ {float:left; 
+  padding:0 15px;
+  color:#7c7c7c;
 }
 
-.form1{
-    color:white;
+.jumbotron .wcont .title
+ {font-family:Arial, Helvetica, sans-serif;
+  color:silver;
+  font-size:24px;
+  padding:0 0 18px 0;
+  display:block;
 }
 
-
-.form1{
-    color:white;
-    float:left;
+.jumbotron .wcont .title a {
+    color:silver;
 }
 
-#l1{
+.jumbotron .wcont .title a:hover {
+    text-decoration:none;
+
+}
+
+.jumbotron .wcont a {
+    color:#7c7c7c;
+}
+
+.jumbotron .wcont ul {
+    list-style:none;
+}
+
+.jumbotron .wcont ul li {
+    padding:10px 0 5px 20px; 
+    background:url(arrow1.png) no-repeat left;
+}
+
+.jumbotron .wcont ul li a:hover {
     color:#5cb85c;
+    text-decoration:none;
+
 }
+
+.bio1{
+    float:right;
+    margin-right:-120px;
+    margin-bottom:20px;
+}
+
+.copy{
+    float:right;
+    margin-right:-148px;
+    margin-bottom:30px;
+    color:silver;
+}
+
+
