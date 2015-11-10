@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BionicGames {
+namespace BionicGames.Forms {
     
     
-    public partial class LoginForm {
+    public partial class GamePage {
         
         /// <summary>
-        /// form1 control.
+        /// gameImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Image gameImage;
         
         /// <summary>
-        /// userNameLbl control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userNameLbl;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// userTextBox control.
+        /// lblGenre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userTextBox;
+        protected global::System.Web.UI.WebControls.Label lblGenre;
         
         /// <summary>
-        /// passwordLbl control.
+        /// lblReleaseYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passwordLbl;
+        protected global::System.Web.UI.WebControls.Label lblReleaseYear;
         
         /// <summary>
-        /// passwordTextBox control.
+        /// lblGameInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
-        
-        /// <summary>
-        /// LogInBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogInBtn;
+        protected global::System.Web.UI.WebControls.Label lblGameInfo;
     }
 }

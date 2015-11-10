@@ -7,29 +7,29 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BionicGames
+namespace BionicGames.View.Forms
 {
-    public partial class LoginForm : System.Web.UI.Page, ILoginForm
+    public partial class LoginForm : Page,ILoginForm
     {
         private LoginFormController _controller;
+        private bool _isLoggedIn;
 
         public LoginForm() 
         {
             _controller = new LoginFormController(this);
- 
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             passwordTextBox.TextMode = (TextBoxMode)2;
+            _controller.LoadTable();
         }
 
         protected void LogInBtn_Click(object sender, EventArgs e)
         {
-            
-            Label info = new Label();
-            info.Text = _controller.LoginToWebsite();
-            info.Visible = true;
+            _isLoggedIn = _controller.LoginToWebsite();
+            if (_isLoggedIn)
+                Response.Redirect("Index.aspx");
         }
 
         public Label UserNameLbl
@@ -72,11 +72,11 @@ namespace BionicGames
         {
             get
             {
-                return passwordTextBox;
+                return this.passwordTextBox;
             }
             set
             {
-                passwordTextBox = value;
+                this.passwordTextBox = value;
             }
         }
 
@@ -90,6 +90,11 @@ namespace BionicGames
             {
                 LogInBtn = value;
             }
+        }
+        public GridView GridDataView 
+        {
+            get { return gridDataView; }
+            set { gridDataView = value; }
         }
     }
 }

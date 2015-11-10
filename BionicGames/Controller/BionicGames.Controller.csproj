@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IGamePage.cs" />
     <Compile Include="Interfaces\ILoginForm.cs" />
+    <Compile Include="Interfaces\IRegisterForm.cs" />
+    <Compile Include="ModelBL\GamePageController.cs" />
     <Compile Include="ModelBL\LoginFormController.cs" />
+    <Compile Include="ModelBL\RegisterFormController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Model\BionicGames.Model.csproj">
       <Project>{adc3f651-b095-49a1-a7ee-9bc52facd47e}</Project>

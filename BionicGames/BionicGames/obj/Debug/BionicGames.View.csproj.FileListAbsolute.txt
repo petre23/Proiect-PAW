@@ -18,3 +18,5 @@ E:\Proiect-PAW\BionicGames\BionicGames\bin\Model.pdb
 E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.View.csprojResolveAssemblyReference.cache
 E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.dll
 E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.pdb
+E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\Interop.DMVIEW2Lib.dll
+E:\Proiect-PAW\BionicGames\BionicGames\obj\Debug\BionicGames.View.csproj.ResolveComReference.cache

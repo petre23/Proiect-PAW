@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,25 +58,90 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Designer.css" />
+    <Content Include="Content\Log.css" />
+    <Content Include="Content\Reg.css" />
+    <Content Include="Forms\GamePage.aspx" />
+    <Content Include="Forms\Index.aspx" />
+    <Content Include="Forms\RegisterForm.aspx" />
+    <Content Include="JavaScript\jquery-1.9.1.min.js" />
+    <Content Include="JavaScript\jssor.slider.debug.js" />
+    <Content Include="JavaScript\jssor.slider.min.js" />
+    <Content Include="JavaScript\jssor.slider.mini.js" />
+    <Content Include="Resources\01.jpg" />
+    <Content Include="Resources\02.jpg" />
+    <Content Include="Resources\04.jpg" />
+    <Content Include="Resources\05.jpg" />
+    <Content Include="Resources\09.jpg" />
+    <Content Include="Resources\a12.png" />
+    <Content Include="Resources\b05.png" />
+    <Content Include="Resources\bionic1.png" />
+    <Content Include="Resources\facebook.png" />
+    <Content Include="Resources\future.png" />
+    <Content Include="Resources\goblin.jpg" />
+    <Content Include="Resources\heroes.jpg" />
+    <Content Include="Resources\loading.gif" />
+    <Content Include="Resources\mafia.jpg" />
+    <Content Include="Resources\star.jpg" />
+    <Content Include="Resources\syndicate.jpg" />
+    <Content Include="Resources\tweet.png" />
+    <Content Include="Resources\witcher.jpg" />
+    <Content Include="Resources\youtube.png" />
     <Content Include="Web.config" />
-    <Content Include="LoginForm.aspx" />
+    <Content Include="Forms\LoginForm.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\GamePage.aspx.cs">
+      <DependentUpon>GamePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GamePage.aspx.designer.cs">
+      <DependentUpon>GamePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainPage.Master.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MainPage.Master.designer.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.aspx.cs">
+      <DependentUpon>RegisterForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.aspx.designer.cs">
+      <DependentUpon>RegisterForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.aspx.cs">
+    <Compile Include="Forms\LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginForm.aspx.designer.cs">
+    <Compile Include="Forms\LoginForm.aspx.designer.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Forms\MainPage.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +158,17 @@
       <Project>{94e14c48-7920-4348-ae3d-ad89aece20fd}</Project>
       <Name>BionicGames.Controller</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DMVIEW2Lib">
+      <Guid>{AEB84C80-95DC-11D0-B7FC-B61140119C4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

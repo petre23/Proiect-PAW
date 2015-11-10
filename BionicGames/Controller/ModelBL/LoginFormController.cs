@@ -3,6 +3,7 @@ using Model.ModelBO;
 using Model.ModelDAO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,16 +23,23 @@ namespace Controller.ModelBL
             userDAO = new UserDAO(); 
         }
 
-        public string LoginToWebsite() 
+        public bool LoginToWebsite()
         {
             user.Username = _form.UserNameTextBox.Text;
             user.Password = _form.PasswordTextBox.Text;
             if (userDAO.SuccesfullLogin(user))
             {
-                return " Wellcome " + user.Username;
+                return true;
             }
             else
-                return " Check password and username and try again";
+                return false;
+        }
+
+        public void LoadTable() 
+        {
+            List<User> userList = userDAO.GetAllUsers();
+            _form.GridDataView.DataSource = userList;
+            _form.GridDataView.DataBind();
         }
 
     }

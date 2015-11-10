@@ -1,0 +1,84 @@
+﻿#userTextBox{
+    border: none;
+    color: #000;
+    height: 25px;
+    line-height:15px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 5px 0px 5px 5px;
+    width:300px;
+    border-radius:6px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    background: #DFDFDF;
+}
+
+#userTextBox:focus{
+    background:#5cb85c;
+}
+
+#LogInBtn{
+    margin-left:0px;
+    background: #5cb85c;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 4px solid #70d694;
+    border-radius: 3px;
+    color:#000;
+    font-weight:bold;
+    width:100px;
+}
+
+#LogInBtn:hover{
+    background:#ff0000;
+    color:#000;
+    border-bottom:4px solid #70d694;
+}
+
+#loginButton{
+    float:left;
+
+    text-align:center;
+}
+
+.login {
+    padding-top: 25px;
+    padding-bottom: 3px;
+    margin: auto;
+    margin-left:25px;
+    color:white;
+}
+
+#passwordTextBox{
+    border: none;
+    color: #000;
+    height: 25px;
+    line-height:15px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 5px 0px 5px 5px;
+    width: 300px;
+    border-radius:6px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    background: #DFDFDF;
+}
+
+#passwordTextBox:focus{
+    background:#5cb85c;
+}
+
+.form1{
+    color:white;
+    float:left;
+}
+
+#l1{
+    color:#5cb85c;
+}

@@ -35,14 +35,44 @@ namespace Model.ModelDAO
                     game.Name = reader["Name"].ToString();
                     game.ReleaseYear = Convert.ToInt32(reader["ReleaseYear"]);
                     game.Genre = reader["Genre"].ToString();
-                    game.Rating = Convert.ToDecimal(reader["Rating"]);
                     game.ImageUrl = reader["ImageURL"].ToString();
                     game.CreationDate = Convert.ToDateTime(reader["CreationDate"]);
                     game.GameInfo = reader["GameInfo"].ToString();
-                    game.Rating = Convert.ToDecimal(reader["Rating"]);
 
                 }
 
+                reader.Close();
+                _connection.Close();
+            }
+            return game;
+        }
+
+        public Game GetGameByName(string name)
+        {
+            Game game = new Game();
+            using (_connection)
+            {
+                _connection.Open();
+                string selectString = "SELECT * FROM GAME WHERE Name = @Name";
+
+                command.CommandText = selectString;
+                command.Parameters.Add("@Name", name);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (!reader.HasRows) return null;
+
+                while (reader.Read())
+                {
+                    game.GameId = Convert.ToInt32(reader["GameId"]);
+                    game.Name = reader["Name"].ToString();
+                    game.ReleaseYear = Convert.ToInt32(reader["ReleaseYear"]);
+                    game.Genre = reader["Genre"].ToString();
+                    game.ImageUrl = reader["ImageURL"].ToString();
+                    game.CreationDate = Convert.ToDateTime(reader["CreationDate"]);
+                    game.GameInfo = reader["GameInfo"].ToString();
+
+                }
                 reader.Close();
                 _connection.Close();
             }
@@ -70,11 +100,9 @@ namespace Model.ModelDAO
                     game.Name = reader["Name"].ToString();
                     game.ReleaseYear = Convert.ToInt32(reader["ReleaseYear"]);
                     game.Genre = reader["Genre"].ToString();
-                    game.Rating = Convert.ToDecimal(reader["Rating"]);
                     game.ImageUrl = reader["ImageURL"].ToString();
                     game.CreationDate = Convert.ToDateTime(reader["CreationDate"]);
                     game.GameInfo = reader["GameInfo"].ToString();
-                    game.Rating = Convert.ToDecimal(reader["Rating"]);
 
                     gameList.Add(game);
                 }
@@ -92,15 +120,14 @@ namespace Model.ModelDAO
             {
                 _connection.Open();
                 string insertString = @"INSERT INTO GAME(Name,ReleaseYear,Genre,
-                                        CreationDate,ImageURL,GameInfo,Rating) VALUES(
-                                        @Name,@ReleaseYear,GETDATE(),@ImageUrl,@GameInfo,@Rating)";
+                                        CreationDate,ImageURL,GameInfo) VALUES(
+                                        @Name,@ReleaseYear,GETDATE(),@ImageUrl,@GameInfo)";
 
                 command.CommandText = insertString;
 
                 command.Parameters.Add("@Name", game.Name);
                 command.Parameters.Add("@ReleaseYear", game.ReleaseYear);
                 command.Parameters.Add("@Genre", game.Genre);
-                command.Parameters.Add("@Rating", game.Rating);
                 command.Parameters.Add("@GameInfo", game.GameInfo);
                 command.Parameters.Add("@ImageUrl", game.ImageUrl);
 
@@ -117,7 +144,7 @@ namespace Model.ModelDAO
             {
                 _connection.Open();
                 string updateString = @"UPDATE GAME SET Name = @Name,ReleaseYear = @ReleaseYear,
-                                                    Genre = @Genre,Rating = @Rating
+                                                    Genre = @Genre,
                                                     GaneInfo = @GameInfo,ImageURL = @ImageUrl
                                                     WHERE GameId = @GameId";
                 command.CommandText = updateString;
@@ -126,7 +153,6 @@ namespace Model.ModelDAO
                 command.Parameters.Add("@Name", game.Name);
                 command.Parameters.Add("@ReleaseYear", game.ReleaseYear);
                 command.Parameters.Add("@Genre", game.Genre);
-                command.Parameters.Add("@Rating", game.Rating);
                 command.Parameters.Add("@GameInfo", game.GameInfo);
                 command.Parameters.Add("@ImageUrl", game.ImageUrl);
 

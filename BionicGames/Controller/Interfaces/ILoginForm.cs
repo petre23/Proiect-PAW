@@ -14,5 +14,6 @@ namespace Controller.Interfaces
         TextBox UserNameTextBox { get; set; }
         TextBox PasswordTextBox { get; set; }
         Button LoginButton { get; set; }
+        GridView GridDataView { get; set; }
     }
 }

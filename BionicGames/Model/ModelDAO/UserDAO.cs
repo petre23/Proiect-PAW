@@ -89,6 +89,7 @@ namespace Model.ModelDAO
 
         public bool SuccesfullLogin(User usr)
         {
+            InitConnection();
             using (_connection)
             {
                 _connection.Open();
@@ -152,7 +153,7 @@ namespace Model.ModelDAO
                     {
                         User user = new User();
                         user.Username = reader["Username"].ToString();
-                        user.IsAdmin = Convert.ToBoolean(reader["Admin"]);
+                        user.IsAdmin = Convert.ToBoolean(reader["IsAdmin"]);
                         userList.Add(user);
                     }
                     reader.Close();
